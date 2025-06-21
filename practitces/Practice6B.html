@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Practice 6 - Tables</title>
+<style type="text/css">
+  .center-div {
+    text-align: center;
+  }
+  .center-table {
+    width: 550px;
+    margin: auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+  }
+  table, th, td {
+    border: 1px solid black;
+    padding: 6px;
+  }
+  .caption-style {
+    color: #003300;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+  .first-column {
+    background-color: #CCCCCC;
+    width: 25%;
+  }
+  .days{
+    background-color: #99FF66;
+  }
+</style>
+</head>
+
+<body>
+<div class="center-div">
+  <table class="center-table">
+    <caption class="caption-style">My Class Schedule</caption>
+    <colgroup>
+      <col class="first-column">
+    </colgroup>
+    <colgroup span="5"></colgroup>
+	
+    <tr>
+      <th class="first-column">Courses</th>
+      <th class="days">Monday</th>
+      <th class="days">Tuesday</th>
+      <th class="days">Wednesday</th>
+      <th class="days">Thursday</th>
+      <th class="days">Friday</th>
+    </tr>
+	
+    <tr>
+      <th class="first-column">INFO 2420</th>
+      <td colspan="5">Online Available 24/7</td>
+    </tr>
+	
+    <tr>
+      <th class="first-column">IT 2600</th>
+      <td></td>
+      <td>10-11</td>
+      <td></td>
+      <td>10-11</td>
+      <td></td>
+    </tr>
+	
+    <tr>
+      <th class="first-column">INFO 405G</th>
+      <td></td>
+      <td></td>
+      <td>11-12</td>
+      <td></td>
+      <td></td>
+    </tr>
+	
+    <tr>
+  <th class="first-column">INFO 3430</th>
+      <td>11-12</td>
+      <td></td>
+      <td></td>
+	  <td>11-12</td>
+	  <td></td>
+	
+	</tr>
+	
+  </table>
+</div>
+</body>
+</html>
