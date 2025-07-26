@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Rent a Pet - Graphics Showcase</title>
+
+  <style type="text/css">
+    #thumbs, #image {
+      width: 700px;
+      border: solid 1px #000;
+      text-align: center;
+      margin: 0 auto;
+      color: #000;
+      background: #f5f5f5;
+      padding: 10px;
+    }
+
+    #thumbs {
+      margin-top: 20px;
+    }
+
+    #thumbs img {
+      border: solid 1px #000;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    #image {
+      height: 400px;
+    }
+
+    .instructions {
+      font-style: italic;
+    }
+  </style>
+
+  <script type="text/javascript">
+    let printDefault = new Image();
+    let printHover = new Image();
+    let logoDefault = new Image();
+    let logoHover = new Image();
+
+    if (document.images) {
+      printDefault.src = "Images/print1.jpg";
+      printHover.src = "Images/print2.jpg";
+      logoDefault.src = "Images/logo1.png";
+      logoHover.src = "Images/logo2.png";
+    }
+
+    function swapMe(imgName, newImg) {
+      document[imgName].src = eval(newImg + ".src");
+    }
+
+    let imgArray = [
+      "HuntingDogsLg.jpg",
+      "GermanShephard2Lg.jpg",
+      "CatandDogLg.jpg",
+      "Pig1Lg.jpg"
+    ];
+
+    let titleArray = [
+      "Golden Retrievers Out for a Walk",
+      "German Shepherd Ready for Pickup",
+      "Cat and Dog Lounging at Home",
+      "Smiling Mini Pig on Lawn"
+    ];
+
+    let imgPath = "Images/Fullsize/";
+
+    function swapImage(index) {
+      document.getElementById("theImage").src = imgPath + imgArray[index];
+      document.getElementById("bottomText").innerHTML = titleArray[index];
+    }
+
+    function preloadImages() {
+      for (let i = 0; i < imgArray.length; i++) {
+        let tempImg = new Image();
+        tempImg.src = imgPath + imgArray[i];
+      }
+    }
+  </script>
+</head>
+
+<body onload="preloadImages()">
+  <div align="center">
+
+    
+    <div>
+      <a href="#" 
+         onmouseover="swapMe('printButton','printHover');" 
+         onmouseout="swapMe('printButton','printDefault');">
+        <img src="Images/print1.jpg" 
+             width="200" 
+             height="50" 
+             name="printButton" 
+             alt="Print this Rent a Pet Page" 
+             style="border:none;" />
+      </a>
+    </div>
+
+   
+    <div>
+      <a href="index.html" 
+         onmouseover="swapMe('logoImage','logoHover');" 
+         onmouseout="swapMe('logoImage','logoDefault');">
+        <img src="Images/logo1.png" 
+             width="200" 
+             height="200" 
+             name="logoImage" 
+             alt="Rent a Pet Logo" 
+             style="border:none;" />
+      </a>
+    </div>
+
+    <br><br>
+
+    
+    <div id="thumbs">
+      <img src="Images/Thumbnails/HuntingDogsLg.jpg" alt="Golden Retrievers" onmouseover="swapImage(0);" />
+      <img src="Images/Thumbnails/GermanShephard2Lg.jpg" alt="German Shepherd" onmouseover="swapImage(1);" />
+      <img src="Images/Thumbnails/CatandDogLg.jpg" alt="Cat and Dog" onmouseover="swapImage(2);" />
+      <img src="Images/Thumbnails/Pig1Lg.jpg" alt="Mini Pig" onmouseover="swapImage(3);" />
+    </div>
+
+    
+    <div id="image">
+      <img id="theImage" src="Images/Fullsize/HuntingDogsLg.jpg" alt="Golden Retrievers" />
+      <h3 id="bottomText">Golden Retrievers Out for a Walk</h3>
+    </div>
+
+    
+    <br><br>
+    <img src="Images/2colback.jpg" alt="Two-Column Background Preview" />
+
+    
+    <p>
+      <a href="http://validator.w3.org/check?uri=referer">
+        <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
+      </a>
+    </p>
+
+  </div>
+</body>
+</html>
