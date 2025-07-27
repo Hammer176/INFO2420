@@ -58,27 +58,26 @@
       document[imgName].src = eval(newImg + ".src");
     }
 
-    let imgArray = [
-      "../Project 6/Photos/HuntingDogsLg.jpg",
-      "../Project 6/Photos/GermanShephard2Lg.jpg",
-      "../Project 6/Photos/CatandDogLg.jpg",
-      "../Project 6/Photos/Pig1Lg.jpg"
-      "../Project 6/Photos/RentAPetlogo.png"
-    ];
+   let imgArray = [
+  "HuntingDogsLg.jpg",
+  "GermanShephard2Lg.jpg",
+  "CatandDogLg.jpg",
+  "Pig1Lg.jpg"
+        ];
 
-    let titleArray = [
-      "Golden Retrievers Out for a Walk",
-      "German Shepherd Ready for Pickup",
-      "Cat and Dog Lounging at Home",
-      "Smiling Mini Pig on Lawn"
-    ];
+let titleArray = [
+  "Golden Retrievers Out for a Walk",
+  "German Shepherd Ready for Pickup",
+  "Cat and Dog Lounging at Home",
+  "Smiling Mini Pig on Lawn"
+];
 
-    let imgPath = "../Project 6/Photos";
+let imgPath = "../Project 6/Photos/";
 
-    function swapImage(index) {
-      document.getElementById("theImage").src = imgPath + imgArray[index];
-      document.getElementById("bottomText").innerHTML = titleArray[index];
-    }
+function swapImage(index) {
+  document.getElementById("theImage").src = imgPath + imgArray[index];
+  document.getElementById("bottomText").innerHTML = titleArray[index];
+}
 
     function preloadImages() {
       for (let i = 0; i < imgArray.length; i++) {
@@ -132,8 +131,8 @@
 
     
     <div id="image">
-      <img src="../Project 6/Photos/HuntingDogsLg.jpg" alt="Golden Retrievers" />
-      <h3 id="bottomText">Golden Retrievers Out for a Walk</h3>
+        <img id="theImage" src="../Project 6/Photos/HuntingDogsLg.jpg" alt="Golden Retrievers" />
+        <h3 id="bottomText">Golden Retrievers Out for a Walk</h3>
     </div>
 
     
