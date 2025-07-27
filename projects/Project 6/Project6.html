@@ -85,6 +85,16 @@ function swapImage(index) {
         tempImg.src = imgPath + imgArray[i];
       }
     }
+
+    let currentSlide = 0;
+
+function rotateSlide() {
+  currentSlide = (currentSlide + 1) % imgArray.length;
+  document.getElementById("theImage").src = imgPath + imgArray[currentSlide];
+  document.getElementById("bottomText").innerHTML = titleArray[currentSlide];
+}
+
+setInterval(rotateSlide, 3000);
   </script>
 </head>
 
